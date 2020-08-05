@@ -17,14 +17,22 @@
                 margin: 0;
             }
 
-            .ck.ck-editor {
-                height: 100vh!important;
-                width: 100vw!important;
+            .full-height {
+                height: 100vh;
+            }
+
+            .flex-center {
+                align-items: center;
+                display: flex;
+                justify-content: center;
+            }
+
+            .position-ref {
             }
 
             .ck-editor__editable_inline {
-                min-height: 92vh;
-                max-height: 100%;
+                min-height: 98vh;
+                width: 94%;
             }
 
         </style>
@@ -32,13 +40,15 @@
 
     </head>
     <body>
-        <div id="editor" style="height: 100vh; width: 100vw">
-            <p>Dummy Content</p>
+        <div class="flex-center position-ref">
+            <div id="editor">
+                <p>Edit me</p>
+            </div>
         </div>
     </body>
 
     <script>
-        ClassicEditor
+        BalloonEditor
             .create( document.querySelector( '#editor' ), {
                 fullPage: true
             } )
